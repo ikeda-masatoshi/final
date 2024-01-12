@@ -16,19 +16,19 @@
 	<body>
         <h1>おすすめの曲一覧</h1>
         <hr>
-        <button onclick="location.href='ren6-5-input.php'">登録</button>
+        <button onclick="location.href='toroku.php'">登録</button>
         <table>
     <tr><th>曲番号</th><th>曲名</th><th>アーティスト名</th></tr>
 <?php
     $pdo=new PDO($connect, USER, PASS);
-    foreach ($pdo->query('select * from product') as $row) {
+    foreach ($pdo->query('select * from music') as $row) {
         echo '<tr>';
         echo '<td>', $row['music_id'], '</td>';
         echo '<td>', $row['music_name'], '</td>';
         echo '<td>', $row['artist_name'], '</td>';
         echo '<td>';
 
-        echo '<form action="ren6-8-edit.php" method="post">';
+        echo '<form action="koshin.php" method="post">';
         echo '<input type="hidden" name="id" value="', $row['id'], '">';
         echo '<button type="submit">更新</button>';
         echo '</form>';
@@ -36,7 +36,7 @@
         echo '</td>';
         echo '<td>';
 
-        echo '<form action="ren6-8-delete.php" method="post">';
+        echo '<form action="delete.php" method="post">';
         echo '<input type="hidden" name="id" value="', $row['id'], '">';
         echo '<button type="submit">削除</button>';
         echo '</form>';
