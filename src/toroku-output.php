@@ -40,6 +40,9 @@
             }
         ?>
         </table>
+        <form action="top.php"method="post">
+            <button type="submit">トップへ戻る</button>
+        </form>
         <form action="toroku.php"method="post">
             <button type="submit">追加画面へ戻る</button>
         </form>
