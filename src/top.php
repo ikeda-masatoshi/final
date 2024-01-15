@@ -16,7 +16,7 @@
 	<body>
         <h1>おすすめの曲一覧</h1>
         <hr>
-        <button onclick="location.href='./toroku.php'">登録</button>
+        <a href="./toroku.php"><button >登録</button></a>
         <table>
     <tr><th>曲番号</th><th>曲名</th><th>アーティスト名</th></tr>
 <?php
