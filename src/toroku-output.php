@@ -16,12 +16,12 @@
     <body>
     <?php
         $pdo=new PDO($connect,USER,PASS);
-        $sql=$pdo->prepare('insert into music(music_id,artist_mei) values (?,?)');
-         if (empty($_POST['music_id'])) {
+        $sql=$pdo->prepare('insert into music(music_name,artist_name) values (?,?)');
+         if (empty($_POST['music_name'])) {
             echo '曲名を入力してください。';
-        }else if (empty($_POST['artist_mei'])) {
+        }else if (empty($_POST['artist_name'])) {
             echo 'アーティスト名を入力してください。';
-        }else if ($sql->execute([ $_POST['music_id'],$_POST['artist_mei']])) {
+        }else if ($sql->execute([ $_POST['music_name'],$_POST['artist_name']])) {
             echo '<font color="red">追加に成功しました。</font>';
         } else {
             echo '<font color="red">追加に失敗しました。</font>';
@@ -32,8 +32,8 @@
         <?php
             foreach($pdo->query('select * from music') as $row) {
                 echo '<tr>';
-                echo '<td>',$row['music_mei'], '</td>';
-                echo '<td>',$row['artist_mei'], '</td>';
+                echo '<td>',$row['music_name'], '</td>';
+                echo '<td>',$row['artist_name'], '</td>';
                 echo '</tr>';
                 echo "\n";
             }
