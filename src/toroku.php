@@ -4,7 +4,6 @@
          <mata charset="UTF-8">
         <title>登録</title>
     </head>
-    <meta http-equiv="Cache-Control" content="no-cache">
     <body>
         <p>音楽を追加します。</p>
         <form action="toroku-output.php" method="post">
