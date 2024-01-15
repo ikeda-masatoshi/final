@@ -28,10 +28,11 @@
         }
     ?>
     <table>
-            <tr><th>曲名</th><th>アーティスト名</th></tr>
+            <tr><th>曲番号</th><th>曲名</th><th>アーティスト名</th></tr>
         <?php
             foreach($pdo->query('select * from music') as $row) {
                 echo '<tr>';
+                echo '<td>',$row['music_id'], '</td>';
                 echo '<td>',$row['music_name'], '</td>';
                 echo '<td>',$row['artist_name'], '</td>';
                 echo '</tr>';
