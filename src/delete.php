@@ -15,7 +15,7 @@
 	<body>
 <?php
     $pdo=new PDO($connect, USER, PASS);
-    $sql=$pdo->prepare('delete from music where id=?');
+    $sql=$pdo->prepare('delete from music where music_id=?');
     if ($sql->execute([$_POST['music_id']])) {
         echo '削除に成功しました。';
     } else {
