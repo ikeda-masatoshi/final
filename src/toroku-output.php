@@ -10,7 +10,6 @@
 <!DOCTYPE html>
 <html lang="ja">
     <head>
-    <meta http-equiv="Cache-Control" content="no-cache">
         <meta charset="UTF-8">
         <title>登録-output</title>
     </head>
