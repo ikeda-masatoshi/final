@@ -14,6 +14,19 @@
         <title>登録-output</title>
     </head>
     <body>
+    <?php
+        $pdo=new PDO($connect,USER,PASS);
+        $sql=$pdo->prepare('insert into music(music_id,artist_mei) values (?,?)');
+         if (empty($_POST['music_id'])) {
+            echo '曲名を入力してください。';
+        }else if (empty($_POST['artist_mei'])) {
+            echo 'アーティスト名を入力してください。';
+        }else if ($sql->execute([ $_POST['music_id'],$_POST['artist_mei']])) {
+            echo '<font color="red">追加に成功しました。</font>';
+        } else {
+            echo '<font color="red">追加に失敗しました。</font>';
+        }
+    ?>
     <table>
             <tr><th>曲名</th><th>アーティスト名</th></tr>
         <?php
