@@ -34,6 +34,7 @@
                 echo '<tr>';
                 echo '<td>',$row['music_id'], '</td>';
                 echo '<td>',$row['music_name'], '</td>';
+                echo '<p>':'</p>';
                 echo '<td>',$row['artist_name'], '</td>';
                 echo '</tr>';
                 echo "\n";
