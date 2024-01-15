@@ -7,8 +7,8 @@
     <body>
         <p>音楽を追加します。</p>
         <form action="toroku-output.php" method="post">
-            曲名<input type="text" name="music_mei"><br>
-            アーティスト名<input type="text" name="artist_mei"><br>
+            曲名　　　　　　<input type="text" name="music_mei"><br>
+            アーティスト名　<input type="text" name="artist_mei"><br>
             <button type="submit">追加</button>
         </form>
     </body>
