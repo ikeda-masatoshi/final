@@ -14,7 +14,7 @@
 	</head>
 	<body>
     <table>
-    <tr><th>曲番号</th><th>曲名</th><th>アーティスト名</th></tr>
+    <tr><th>曲名</th><th>アーティスト名</th></tr>
 <?php
     $pdo=new PDO($connect, USER, PASS);
 	$sql=$pdo->prepare('select * from music where music_id=?');
