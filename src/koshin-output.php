@@ -17,7 +17,7 @@
     <button onclick="location.href='top.php'">トップへ戻る</button>
 <?php
     $pdo=new PDO($connect, USER, PASS);
-    $sql=$pdo->prepare('update music set music_name=?, artist_nama=? where music_id=?');
+    $sql=$pdo->prepare('update music set music_name=?, artist_name=? where music_id=?');
     
     if (empty($_POST['music_name'])) {
         echo '曲名を入力してください。';
