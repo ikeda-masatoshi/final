@@ -6,6 +6,8 @@
 
     $connect = 'mysql:host='. SERVER . ';dbname='. DBNAME . ';charset=utf8';
 ?>
+
+
 <!DOCTYPE html>
 <html lang="ja">
 	<head>
