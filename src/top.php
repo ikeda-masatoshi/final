@@ -37,7 +37,7 @@
         echo '<td>';
 
         echo '<form action="delete.php" method="post">';
-        echo '<input type="hidden" name="id" value="', $row['music_id'], '">';
+        echo '<input type="hidden" name="music_id" value="', $row['music_id'], '">';
         echo '<button type="submit">削除</button>';
         echo '</form>';
 
