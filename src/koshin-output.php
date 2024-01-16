@@ -35,7 +35,7 @@
 ?>
         <hr>
         <table>
-        <tr><th>曲番号</th><th>曲名</th><th>アーティスト名</th></tr>
+        <tr><th>曲ID</th><th>曲名</th><th>アーティスト名</th></tr>
 
 <?php
 foreach ($pdo->query('select * from music') as $row) {

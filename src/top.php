@@ -20,7 +20,7 @@
         <hr>
         <button onclick="location.href='https://aso2201352.fem.jp/GitHub/teamC/final/src/toroku.php'">登録</button>
         <table>
-    <tr><th>曲番号</th><th>曲名</th><th>アーティスト名</th></tr>
+    <tr><th>曲ID</th><th>曲名</th><th>アーティスト名</th></tr>
 <?php
     $pdo=new PDO($connect, USER, PASS);
     foreach ($pdo->query('select * from music') as $row) {

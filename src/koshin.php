@@ -14,7 +14,7 @@
 	</head>
 	<body>
     <table>
-    <tr><th>曲名</th><th>アーティスト名</th></tr>
+    <tr><th>曲ID</th><th>曲名</th><th>アーティスト名</th></tr>
 <?php
     $pdo=new PDO($connect, USER, PASS);
 	$sql=$pdo->prepare('select * from music where music_id=?');
@@ -24,6 +24,10 @@
 	foreach ($sql as $row) {
         echo '<tr>';
 		echo '<form action="koshin-output.php" method="post">';
+        echo '<td>';
+        echo $row['music_id'];
+        echo '<input type="hidden" name="music_id" value="', $row['music_id'], '">';
+        echo '</td> ';
 		echo '<td>';
 		echo '<input type="text" name="music_name" value="', $row['music_name'], '">';
 		echo '</td> ';
