@@ -14,7 +14,6 @@
 		<title>更新-output</title>
 	</head>
 	<body>
-    <button onclick="location.href='top.php'">トップへ戻る</button>
 <?php
     $pdo=new PDO($connect, USER, PASS);
     $sql=$pdo->prepare('update music set music_name=?, artist_name=? where music_id=?');
@@ -48,7 +47,7 @@ foreach ($pdo->query('select * from music') as $row) {
 }
 ?>
         </table>
-        <button onclick="location.href='koshin.php'">更新画面へ戻る</button>
+        <button onclick="location.href='top.php'">トップへ戻る</button>
         
 
     </body>
