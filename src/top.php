@@ -29,7 +29,7 @@
         echo '<td>';
 
         echo '<form action="koshin.php" method="post">';
-        echo '<input type="hidden" name="id" value="', $row['music_id'], '">';
+        echo '<input type="hidden" name="music_id" value="', $row['music_id'], '">';
         echo '<button type="submit">更新</button>';
         echo '</form>';
 
