@@ -24,9 +24,6 @@
 	foreach ($sql as $row) {
         echo '<tr>';
 		echo '<form action="koshin-output.php" method="post">';
-        echo '<td> ';
-		echo '<input type="text" name="music_id" value="', $row['music_id'], '">';
-		echo '</td> ';
 		echo '<td>';
 		echo '<input type="text" name="music_name" value="', $row['music_name'], '">';
 		echo '</td> ';
