@@ -10,7 +10,7 @@
 <html lang="ja">
 	<head>
 		<meta charset="UTF-8">
-		<title>delete</title>
+		<title>削除</title>
 	</head>
 	<body>
 <?php
